@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="viewVehicleLinks.js"></script>
+    <script src="lottie-icons.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -15,23 +16,25 @@
             colors: {
               primary: '#0B3B6B', // deep blue
               secondary: '#1A1A1A', // dark gray/black for contrast
+              accentOrange: '#FF6F3C', // vibrant orange accent
+              accentLime: '#A6D608', // lime green accent
               dark: '#111111',
               light: '#F9F9F9',
-              accent: '#0B3B6B', // use blue as accent
-              highlight: '#0F4C81', // lighter blue for highlights
               backgroundLight: '#FFFFFF',
               backgroundAlt: '#F0F0F0',
               textPrimary: '#111111',
               textSecondary: '#444444',
             },
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+              body: ['Open Sans', 'sans-serif'],
               affectionate: ['Pacifico', 'cursive'],
             },
           },
         },
       };
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
@@ -92,6 +95,9 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        border-radius: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
       }
       a.bg-secondary:hover {
         background: linear-gradient(90deg, #FFD700 0%, #D4AF37 100%);
@@ -111,6 +117,9 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        border-radius: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
       }
       a.bg-primary:hover {
         background: #0f4c81;
@@ -122,11 +131,14 @@
       }
       /* Icon animations */
       svg {
-        transition: transform 0.3s ease, fill 0.3s ease;
+        transition: transform 0.3s ease, fill 0.3s ease, filter 0.3s ease;
+        cursor: pointer;
+        filter: drop-shadow(0 0 0 rgba(0,0,0,0));
       }
       svg:hover {
-        transform: scale(1.1);
-        fill: #D4AF37;
+        transform: scale(1.15);
+        fill: #FF6F3C;
+        filter: drop-shadow(0 0 6px rgba(255,111,60,0.7));
       }
 
       a.bg-primary {
